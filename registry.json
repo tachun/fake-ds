@@ -5,37 +5,37 @@
   "items": [
     {
       "name": "button",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Button",
       "description": "A simple button component.",
       "files": [
         {
-          "path": "registry/fake-ds/button/button.tsx",
-          "type": "registry:component"
+          "path": "src/components/ui/button.tsx",
+          "type": "registry:ui"
         }
       ]
     },
     {
       "name": "card",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Card",
       "description": "A simple card component.",
       "files": [
         {
-          "path": "registry/fake-ds/card/card.tsx",
-          "type": "registry:component"
+          "path": "src/components/ui/card.tsx",
+          "type": "registry:ui"
         }
       ]
     },
     {
       "name": "theme",
-      "type": "registry:file",
+      "type": "registry:theme",
       "title": "Theme",
       "description": "Brand theme CSS variables for consistent theming.",
       "files": [
         {
-          "path": "registry/fake-ds/theme.css",
-          "type": "registry:file"
+          "path": "src/theme.css",
+          "type": "registry:theme"
         }
       ]
     }
