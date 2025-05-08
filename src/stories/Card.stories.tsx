@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Check, CircleHelp } from "lucide-react";
+import { CircleHelp } from "lucide-react";
 
 import { Button } from "../components/ui/button";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
