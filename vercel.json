@@ -17,8 +17,7 @@
   ],
   "routes": [
     {
-      "src": "/r/(.*)",
-      "dest": "/r/$1"
+      "handle": "filesystem"
     },
     {
       "src": "/storybook",
@@ -31,9 +30,6 @@
     {
       "src": "/storybook/(.*)",
       "dest": "/storybook-static/$1"
-    },
-    {
-      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
