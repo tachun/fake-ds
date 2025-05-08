@@ -5,14 +5,28 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "pnpm run build-registry && pnpm run build-storybook && pnpm run build",
+        "buildCommand": "pnpm run build-registry",
+        "outputDirectory": "public/r",
+        "distDir": "public/r"
+      }
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "pnpm run build",
         "outputDirectory": "dist",
         "distDir": "dist"
       }
     },
     {
       "src": "storybook-static/**",
-      "use": "@vercel/static"
+      "use": "@vercel/static",
+      "config": {
+        "buildCommand": "cp -r public/r/* dist/r/ && pnpm run build-storybook",
+        "outputDirectory": "storybook-static",
+        "distDir": "storybook-static"
+      }
     }
   ],
   "routes": [
