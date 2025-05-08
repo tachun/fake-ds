@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build-registry": "shadcn build"
+    "build-registry": "shadcn build",
+    "vercel-build": "mkdir -p dist/r && mkdir -p dist/storybook && npm run build-registry && cp -r public/r/* dist/r/ && npm run build && npm run build-storybook && cp -r storybook-static/* dist/storybook/"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.1.13",
