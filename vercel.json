@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build && pnpm run build-storybook",
+  "buildCommand": "pnpm run build && pnpm run build-storybook && cp registry.json dist/ && cp -r storybook-static dist/",
   "outputDirectory": "dist",
   "routes": [
+    {
+      "src": "/storybook",
+      "dest": "/storybook-static/index.html"
+    },
     {
       "src": "/storybook/(.*)",
       "dest": "/storybook-static/$1"
