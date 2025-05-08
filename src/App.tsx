@@ -6,7 +6,7 @@ function App() {
     <>
       <h1>Hello, this is the fake ds</h1>
       <Button asChild>
-        <a href="/storybook">Goto Storybook</a>
+        <a href="/storybook/index.html">Goto Storybook</a>
       </Button>
 
       <Button asChild>
