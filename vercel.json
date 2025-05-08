@@ -21,6 +21,10 @@
       "dest": "/storybook-static/index.html"
     },
     {
+      "src": "/storybook/index.html",
+      "dest": "/storybook-static/index.html"
+    },
+    {
       "src": "/storybook/(.*)",
       "dest": "/storybook-static/$1"
     },

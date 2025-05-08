@@ -6,6 +6,10 @@ function App() {
     <>
       <h1>Hello, this is the fake ds</h1>
       <Button asChild>
+        <a href="/storybook">Goto Storybook</a>
+      </Button>
+
+      <Button asChild>
         <a href="/registry.json">Get Registry</a>
       </Button>
     </>
