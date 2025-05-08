@@ -1,29 +1,41 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "shadcn",
-  "homepage": "https://ui.shadcn.com",
+  "name": "fake-ds",
+  "homepage": "https://fake-ds.vercel.app/",
   "items": [
     {
       "name": "button",
-      "type": "registry:block",
+      "type": "registry:component",
       "title": "Button",
       "description": "A simple button component.",
       "files": [
         {
-          "path": "registry/new-york/button/button.tsx",
+          "path": "registry/fake-ds/button/button.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
       "name": "card",
-      "type": "registry:block",
+      "type": "registry:component",
       "title": "Card",
       "description": "A simple card component.",
       "files": [
         {
-          "path": "registry/new-york/card/card.tsx",
+          "path": "registry/fake-ds/card/card.tsx",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "registry:file",
+      "title": "Theme",
+      "description": "Brand theme CSS variables for consistent theming.",
+      "files": [
+        {
+          "path": "registry/fake-ds/theme.css",
+          "type": "registry:file"
         }
       ]
     }

@@ -5,7 +5,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "pnpm run build && pnpm run build-storybook && cp registry.json dist/",
+        "buildCommand": "pnpm run build && pnpm run build-storybook && mkdir -p dist/registry/fake-ds && for file in src/components/ui/*.tsx; do base=$(basename $file .tsx); mkdir -p dist/registry/fake-ds/$base; cp $file dist/registry/fake-ds/$base/; done && cp src/theme.css dist/registry/fake-ds/theme.css && cp registry.json dist/",
         "outputDirectory": "dist",
         "distDir": "dist"
       }
