@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcn",
+  "homepage": "https://ui.shadcn.com",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:block",
+      "title": "Button",
+      "description": "A simple button component.",
+      "files": [
+        {
+          "path": "registry/new-york/button/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:block",
+      "title": "Card",
+      "description": "A simple card component.",
+      "files": [
+        {
+          "path": "registry/new-york/card/card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
