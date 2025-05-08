@@ -17,6 +17,10 @@
   ],
   "routes": [
     {
+      "src": "/r/(.*)",
+      "dest": "/r/$1"
+    },
+    {
       "src": "/storybook",
       "dest": "/storybook-static/index.html"
     },
@@ -33,7 +37,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ]
 }
