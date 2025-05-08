@@ -1,24 +1,18 @@
 {
   "version": 2,
   "buildCommand": "pnpm run build && pnpm run build-storybook",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "storybook-static/**",
-      "use": "@vercel/static"
-    }
-  ],
+  "outputDirectory": "dist",
   "routes": [
     {
       "src": "/storybook/(.*)",
       "dest": "/storybook-static/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
