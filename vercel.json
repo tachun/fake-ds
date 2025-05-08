@@ -1,21 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build && pnpm run build-storybook && cp registry.json dist/",
+  "buildCommand": "pnpm run build && pnpm run build-storybook && cp registry.json dist/ && cp -r storybook-static dist/storybook",
   "outputDirectory": "dist",
-  "publicSourceDirectories": [
-    "storybook-static"
-  ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/storybook",
-      "destination": "/storybook-static/index.html"
+      "src": "/storybook",
+      "dest": "/storybook/index.html"
     },
     {
-      "source": "/storybook/:path*",
-      "destination": "/storybook-static/:path*"
-    }
-  ],
-  "routes": [
+      "src": "/storybook/(.*)",
+      "dest": "/storybook/$1"
+    },
     {
       "handle": "filesystem"
     },
