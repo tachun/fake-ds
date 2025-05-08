@@ -1,22 +1,35 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build && pnpm run build-storybook && cp registry.json dist/ && cp -r storybook-static dist/storybook",
-  "outputDirectory": "dist",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "pnpm run build && pnpm run build-storybook && cp registry.json dist/",
+        "outputDirectory": "dist",
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "storybook-static/**",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/storybook",
-      "dest": "/storybook/index.html"
+      "dest": "/storybook-static/index.html"
     },
     {
       "src": "/storybook/(.*)",
-      "dest": "/storybook/$1"
+      "dest": "/storybook-static/$1"
     },
     {
       "handle": "filesystem"
     },
     {
-      "src": "/.*",
-      "dest": "/index.html"
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
