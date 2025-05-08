@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "buildCommand": "tsc -b && vite build && storybook build",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "storybook-static/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/storybook/(.*)",
+      "dest": "/storybook-static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+}

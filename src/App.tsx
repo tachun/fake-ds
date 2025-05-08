@@ -1,12 +1,15 @@
-import { Button } from '@/components/ui/button'
-import './App.css'
+import { Button } from "@/components/ui/button";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <Button>Click me</Button>
+      <h1>Hello, this is the fake ds</h1>
+      <Button asChild>
+        <a href="/registry.json">Get Registry</a>
+      </Button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
