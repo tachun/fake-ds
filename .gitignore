@@ -27,4 +27,5 @@ dist-ssr
 .vercel
 
 public/r
+storybook-static
 
