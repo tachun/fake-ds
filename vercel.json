@@ -5,7 +5,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "pnpm run build-registry && pnpm run build-storybook && mkdir -p dist/r && cp -r public/r/* dist/r/ && pnpm run build",
+        "buildCommand": "pnpm run build-registry && pnpm run build-storybook && pnpm run build",
         "outputDirectory": "dist",
         "distDir": "dist"
       }
